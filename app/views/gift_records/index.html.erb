@@ -1,0 +1,21 @@
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th> Name </th>
+        <th> Gift </th>
+        <th> Date </th>
+        <th> Notes </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @gift_records.each do |x| %>
+        <tr>
+            <td><%= x.name %></td>
+            <td><%= x.gift %></td>
+            <td><%= x.when %></td>
+            <td><%= x.notes %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+<%= form_for(@gift_record) do |f| %>
+  <% if @gift_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gift_record.errors.count, "error") %> prohibited this gift_record from being saved:</h2>
+
+      <ul>
+      <% @gift_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :when %><br>
+    <%= f.date_select :when %>
+  </div>
+  <div class="field">
+    <%= f.label :gift %><br>
+    <%= f.text_field :gift %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

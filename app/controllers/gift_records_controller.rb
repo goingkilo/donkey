@@ -1,7 +1,7 @@
 class GiftRecordsController < ApplicationController
   before_action :set_gift_record, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  layout "tao"
+  layout "gift_record"
 
 
   # GET /gift_records
@@ -25,6 +25,12 @@ class GiftRecordsController < ApplicationController
 
   # GET /gift_records/1/edit
   def edit
+    @me = current_user
+  end
+
+  def logout
+    sign_out current_user
+    redirect_to free_Content_path
   end
 
   # POST /gift_records

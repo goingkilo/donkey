@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Monocle</title>
+        <title>Gift Records</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -17,17 +17,24 @@
 <nav class="navbar navbar-inverse"> <!-- navbar-fixed-top" role="navigation"-->
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Monocle</a>
+            <a class="navbar-brand" href="#">Gift Records</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Adventure</a></li>
-            <li><a href="#">Quotes</a></li>
-            <li><a href="#">Maps</a></li>
-            <li><a href="#">Ships</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Events</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/gift_records">Gift records</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Guest</a></li>
+            <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= @me.email %> </a></li>-->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="glyphicon glyphicon-user"></span><%= @me.email %>
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Settings</a></li>
+                    <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete  %></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>

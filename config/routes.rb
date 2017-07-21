@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   resources :gift_records
   devise_for :users
 
-  get 'tao/Om'
-  get 'free/Content'
-  get 'tao/logout'
+  get 'tao/says'
+  get 'tao/paper'
 
-  root 'gift_records#index'
+  root 'tao#says'
+  #root 'gift_records#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

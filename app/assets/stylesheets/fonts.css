@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'newspaper';
-    src: url('../fonts/OldNewspaperTypes.ttf') format('truetype');;
+    src: url('/assets/OldNewspaperTypes.ttf') format('truetype');;
 }
 @font-face {
     font-family: 'handwriting';
-    src: url('../fonts/typeo___.ttf') format('truetype');
+    src: url('/assets/typeo___.ttf') format('truetype');
 }
 @font-face {
     font-family: 'typewriter';
-    src: url('../fonts/Essays1743.ttf') format('truetype');
+    src: url('/assets/Essays1743.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'quickhand';
-    src: url('../fonts/Quikhand.ttf') format('truetype');
+    src: url('/assets/Quikhand.ttf') format('truetype');
 }
 @font-face {
     font-family: 'simple_joys';
-    src: url('../fonts/simple_joys.ttf') format('truetype');
+    src: url('/assets/simple_joys.ttf') format('truetype');
 }
 
 @font-face {
@@ -28,3 +28,5 @@
     url('/assets/glyphicons-halflings-regular.ttf') format('truetype'),
     url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+/*https://stackoverflow.com/questions/18294150/how-to-use-fonts-in-rails-4*/

@@ -1,13 +1,32 @@
 
+<script>
+//    $(document).ready(function(){
+//        $('.edito').hide();
+//
+//        $('tr').click( function(x){
+//            console.log( x);
+//            console.log(x.currentTarget['id']);
+//        });
+//
+//        $('tr').hover( function(x){
+//            $('.edito').show();
+//        },
+//        function(x) {
+//            $('.edito').hide();
+//        });
+//
+//    });
+</script>
+
 <table class="table table-bordered">
-    <thead>
-    <tr>
-        <th> Name </th>
-        <th> Gift </th>
-        <th> Date </th>
-        <th> Notes </th>
-    </tr>
-    </thead>
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th> Name </th>-->
+        <!--<th> Gift </th>-->
+        <!--<th> Date </th>-->
+        <!--<th> Notes </th>-->
+    <!--</tr>-->
+    <!--</thead>-->
     <tbody>
     <% @gift_records.each do |x| %>
         <tr>
@@ -15,6 +34,8 @@
             <td><%= x.gift %></td>
             <td><%= x.when %></td>
             <td><%= x.notes %></td>
+            <td> <%= link_to '', edit_gift_record_path(x), :class => 'glyphicon glyphicon-edit' %>  </td>
+            <td> <%= link_to '', x, method: :delete, :class => 'glyphicon glyphicon-remove', data: {confirm: 'Are you sure?'} %></td>
         </tr>
     <% end %>
     </tbody>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'tao/says'
   get 'tao/paper'
-
+  get 'tao/mailme'
   root 'tao#says'
   #root 'gift_records#index'
 

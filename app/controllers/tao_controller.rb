@@ -42,6 +42,9 @@ class TaoController < ApplicationController
   }
   end
 
-
+  def mailme
+      UserMailer.send_email.deliver_later
+      redirect_to root_path
+  end
 
 end
